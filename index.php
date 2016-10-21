@@ -1,40 +1,27 @@
 <?php
-require_once ('venkyjntuk.php');
-require_once ('venkydb.php');
-$regd = $_GET['api'];
+$header = array();
+$data='{  "FareSearchRequest": {    "Origin": "LAX",    "Destination": "SIN",    "DepartureDate": "2016-10-31",
+    "ReturnDate": "",
+    "PassengerType": "ADT"
+  }
+}';
+$header[] = 'Access-Control-Allow-Headers : *';
+$header[] = 'Content-type: application/json';
+$header[] = 'Authorization: Bearer jHBGzFs1LRennqdGsdFj_pgxw3ka';
+$url_link='http://apphonics.tcs.com/public/travelport/faresFinder/v1.0.0/getFaresList';
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+curl_setopt($ch, CURLOPT_URL, $url_link);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION,false);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
+curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.112 Safari/535.1');
+$html = curl_exec($ch);
+curl_close($ch);
 
-$reg = getreg($regd);
-if($reg=='fail') {
-    echo $reg; 
-    return false;
-}
+header('Content-type: application/json');
+echo json_encode(json_decode($html, true));
 
-$name_url_sql_q = "SELECT * FROM `venkymain` WHERE `reg`='$reg' and `type` = 'j' and sem != '11' and sem!='12' LIMIT 1;";
-$name_url_sql=mysql_query($name_url_sql_q)or die (mysql_error());
-$name_url_c=mysql_fetch_array($name_url_sql);
-
-$name_url=$name_url_c['url'];
-$name_ref=$name_url_c['ref'];
-
-$name = getname($regd,$name_url,$name_ref);
-if($name=='fail') {
-    echo $name; 
-    return false;
-}
-
-$sql_order = mysql_query("SELECT * FROM `venkymain` WHERE `reg` = '$reg';") or die (mysql_error());
-
-while($sql_marks=mysql_fetch_array($sql_order)) {
-    $url=$sql_marks['url'];
-    $sem=$sql_marks['sem'];
-    $ref=$sql_marks['ref'];
-    $type=$sql_marks['type'];
-    
-    $res = getmarks($regd,$url,$ref,$sem,$type);
-    $back[]= $res;
-    }
-
-//$marks = getmarks('10331a0398','10331A03','','','j');
-//echo $reg.'<br>'.$name.'<br>'.$marks;
-echo $reg.'<br>'.$name.'<br>'.array_sum($back);
 ?>
