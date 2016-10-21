@@ -1,6 +1,7 @@
 <?php
 $header = array();
 $data='{
+  "RuleRequest": {
   "Key": "LAXSIN001",
     "Origin": "LAX",
     "Destination": "SIN",
