@@ -8,7 +8,7 @@
 
             <div class="input-field col s12 m3">
 
-              <input id="icon_prefix" type="text"  ng-model="origin" ng-change="showoriginsuggestion()">
+              <input id="icon_prefix" type="text"  ng-model="origin" ng-change="showoriginsuggestion()" autocomplete="off">
               <label for="icon_prefix">Origin City</label>
               <div class="suggestions" ng-show="originsugg">
                 <span  ng-repeat="city in cities.Cities | filter : origin" ng-click="updateOrigin(city.code)">
@@ -18,7 +18,7 @@
             </div>
             <div class="input-field col s12 m3">
 
-              <input id="icon_telephone" type="text" ng-model="destination" ng-change="showdestinationsuggestion()">
+              <input id="icon_telephone" type="text" ng-model="destination" ng-change="showdestinationsuggestion()" autocomplete="off">
               <label for="icon_telephone">Destination City</label>
               <div class="suggestions" ng-show="destinationsugg">
                 <span  ng-repeat="city in cities.Cities | filter : destination" ng-click="updateDestination(city.code)">
