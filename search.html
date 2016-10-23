@@ -1,0 +1,95 @@
+<div class="row searchBoxContainer">
+  <div class="col s12 m12">
+    <div class="card-panel">
+      <div class="heading"><p>Search Flights</p></div>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+
+            <div class="input-field col s12 m3">
+
+              <input id="icon_prefix" type="text"  ng-model="origin" ng-change="showoriginsuggestion()">
+              <label for="icon_prefix">Origin City</label>
+              <div class="suggestions" ng-show="originsugg">
+                <span  ng-repeat="city in cities.Cities | filter : origin" ng-click="updateOrigin(city.code)">
+                  {{city.name}} | {{city.code}}
+                </span>
+              </div>
+            </div>
+            <div class="input-field col s12 m3">
+
+              <input id="icon_telephone" type="text" ng-model="destination" ng-change="showdestinationsuggestion()">
+              <label for="icon_telephone">Destination City</label>
+              <div class="suggestions" ng-show="destinationsugg">
+                <span  ng-repeat="city in cities.Cities | filter : destination" ng-click="updateDestination(city.code)">
+                  {{city.name}} | {{city.code}}
+                </span>
+              </div>
+            </div>
+            <div class="input-field col s12 m3">
+              <input type="date" class="datepicker" value="2016-10-31" ng-model="calanderdate" ng-change="caldate = convertToDate(calanderdate)">
+            </div>
+
+            <div class="input-field col s12 m3">
+  <select class="browser-default">
+    <option value="" disabled selected>Passenger Type</option>
+    <option value="ADT">ADT</option>
+  </select>
+            </div>
+
+            <div class="input-field col s12 ">
+              <a ui-sref="flights({originCity:origin,destinationCity:destination,calanderdate:caldate})" class="waves-effect waves-light btn searchbtn">Search Flights</a>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+
+<!---
+<div class="row frequent">
+  <div class="col s12 m6 l3">
+    <div class="card">
+      <div class="card-image">
+        <img src="images/ad.jpg">
+        <span class="card-title">MAA <i class="material-icons">arrow_forward</i> SIN</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col s12 m6 l3">
+    <div class="card">
+      <div class="card-image">
+        <img src="images/ad.jpg">
+        <span class="card-title">MAA <i class="material-icons">arrow_forward</i> VTZ</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col s12 m6 l3">
+    <div class="card">
+      <div class="card-image">
+        <img src="images/ad.jpg">
+        <span class="card-title">DEL <i class="material-icons">arrow_forward</i> SIN</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="col s12 m6 l3">
+    <div class="card">
+      <div class="card-image">
+        <img src="images/ad.jpg">
+        <span class="card-title">MUM <i class="material-icons">arrow_forward</i> MAA</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+--->

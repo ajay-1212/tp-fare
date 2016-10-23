@@ -1,0 +1,199 @@
+{
+  "FareSearchResponse": {
+    "origin": "LAX",
+    "destination": "SIN",
+    "DepartureDate": "2016-10-31",
+    "FareInfo": [
+      {
+        "Key": "LAXSIN001",
+        "FareBasis": "SLE0OPM0",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "All Nippon",
+        "LastTicketingDate": "2016-10-27",
+        "AdvancePurchaseDays": "5",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "156.00"
+        }
+      },
+      {
+        "Key": "LAXSIN002",
+        "FareBasis": "SLE0OPM0",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "United",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "175.00"
+        }
+      },
+      {
+        "Key": "LAXSIN003",
+        "FareBasis": "QLE0R2O1",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "American",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "233.00"
+        }
+      },
+      {
+        "Key": "LAXSIN004",
+        "FareBasis": "TXSO",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "China Airlines",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "493.00"
+        }
+      },
+      {
+        "Key": "LAXSIN005",
+        "FareBasis": "Q2NRCWUS",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "China Southern",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "434.00"
+        }
+      },
+      {
+        "Key": "LAXSIN006",
+        "FareBasis": "NLE0R2O1",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "American",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "286.00"
+        }
+      },
+      {
+        "Key": "LAXSIN007",
+        "FareBasis": "QOWSQCS",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "Air India",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "353.00"
+        }
+      },
+      {
+        "Key": "LAXSIN008",
+        "FareBasis": "OLV3PXOW",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "Turkish Airlines",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "362.00"
+        }
+      },
+      {
+        "Key": "LAXSIN006",
+        "FareBasis": "VLE0R2O1",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "American",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "457.00"
+        }
+      },
+      {
+        "Key": "LAXSIN010",
+        "FareBasis": "NLSQVSO",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "Singapore",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "390.00"
+        }
+      },
+      {
+        "Key": "LAXSIN011",
+        "FareBasis": "ESQPO",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "Singapore",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "546.00"
+        }
+      },
+      {
+        "Key": "LAXSIN012",
+        "FareBasis": "ESQPO",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "Singapore",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "701.00"
+        },
+        "FareSurcharge": {
+          "Key": "100180T",
+          "Type": "Stopover Charge",
+          "Amount": {
+            "CurrencyCode": "NUC",
+            "Value": "200.00"
+          }
+        }
+      },
+      {
+        "Key": "LAXSIN013",
+        "FareBasis": "YSQPO",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "Singapore",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "936.00"
+        }
+      },
+      {
+        "Key": "LAXSIN014",
+        "FareBasis": "Y",
+        "PassengerTypeCode": "ADT",
+        "Carrier": "American",
+        "LastTicketingDate": "2016-10-25",
+        "AdvancePurchaseDays": "7",
+        "Penalty": "No",
+        "Amount": {
+          "CurrencyCode": "USD",
+          "Value": "2454.00"
+        }
+      }
+    ]
+  }
+}

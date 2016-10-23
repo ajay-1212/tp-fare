@@ -1,0 +1,45 @@
+<div class="row flights-header">
+    <div class="col s12 m6 l3 ">
+      <p><span ng-bind="origin"></span> <i class="material-icons">arrow_forward</i> <span ng-bind="destination"></span></p>
+    </div>
+</div>
+
+<div class="row flights-results">
+<div class="col s12 m12 l12">
+
+
+  <div class="searchResultsContainer" ng-repeat="item in searchResults">
+    <div class="card horizontal" ng-click="showRules(item.Key)">
+      <div class="card-image">
+        <img src="images/{{item.Carrier}}.png" >
+      </div>
+        <div class="card-content">
+          <p class="airlines">{{item.Carrier}}</p>
+          <div class="desct">
+          <p class="desc lda"><span>Last Date</span>{{item.LastTicketingDate | date:'dd-MMM'}}</p>
+          <p class="desc"><span>Adv. Purchase</span>{{item.AdvancePurchaseDays}} Days</p>
+          <p class="desc"><span>Penalty</span>{{item.Penalty}}</p>
+        </div>
+        </div>
+
+        <div class="card-action">
+          <span class="currency">{{item.Amount.CurrencyCode}}</span>
+          <span class="price">{{splitFares(item.Amount.Value,0)}}<span>.{{splitFares(item.Amount.Value,1)}}</span></span>
+        </div>
+    </div>
+    <div class="rules rulesdiv" id="{{item.Key}}" >
+      <div class="rulesheader"><span class="close" ng-click="closeall()"><i class="material-icons">close</i></span>
+      <span class="titleh">Fare Rules</span></div>
+      <span class="headg">PENALTY</span>
+      {{ruleitem.Penalty}}
+      <span class="headg">STOP OVER</span>
+      {{ruleitem.StopOver}}
+      <span class="headg">TRANSFER</span>
+      {{ruleitem.Transfer}}
+      <a class="waves-effect waves-light btn">SELECT FLIGHT</a>
+
+    </div>
+  </div>
+
+  </div>
+</div>
